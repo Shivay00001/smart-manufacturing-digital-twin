@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Manufacturing Digital Twin</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .stat {
+            margin-bottom: 5px;
+        }
+
+        .label {
+            color: #aaa;
+            font-size: 0.8em;
+        }
+
+        .value {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info">
+        <h3>Machine: CNC-001</h3>
+        <div class="stat">
+            <div class="label">Status</div>
+            <div class="value" id="status">CONNECTING...</div>
+        </div>
+        <div class="stat">
+            <div class="label">Temperature</div>
+            <div class="value" id="temp">-- °C</div>
+        </div>
+        <div class="stat">
+            <div class="label">Vibration</div>
+            <div class="value" id="vibration">-- mm/s</div>
+        </div>
+    </div>
+    <script type="module" src="/static/js/app.js"></script>
+</body>
+
+</html>
