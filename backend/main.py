@@ -11,7 +11,7 @@ class ConnectionManager:
     def __init__(self):
         self.active_connections: List[WebSocket] = []
 
-    async struct_connect(self, websocket: WebSocket):
+    async def connect(self, websocket: WebSocket):
         await websocket.accept()
         self.active_connections.append(websocket)
 
@@ -37,7 +37,7 @@ async def get_assets():
 
 @app.websocket("/ws/telemetry")
 async def websocket_endpoint(websocket: WebSocket):
-    await manager.struct_connect(websocket)
+    await manager.connect(websocket)
     try:
         while True:
             # Simulate real-time sensor updates
